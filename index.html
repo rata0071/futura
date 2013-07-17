@@ -5,15 +5,16 @@
     <title>FM Futura 90.5</title>
     <meta name="description" content="Radio Futura es una radio popular que nació en 1986, cuando empezaron a surgir emisoras alternativas en distintos lugares del país." />
 	
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="assets/css/jquery.bxslider.css" />
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/assets/css/jquery.bxslider.css" />
 	
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.bxslider.min.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.bxslider.min.js"></script>
 	
 	<style>
 		body { font-family: arial }
+		form { margin: 0}
 		header { margin-top: 13px }
 		header img { width:100% }
 		
@@ -33,16 +34,22 @@
 		.bxslider { margin: 0 }
 		
 		h2 { font-size: 28px; line-height: 30px; }
-		.noticias article { border-bottom: 1px solid silver; }
+		.noticias article { border-bottom: 1px solid silver; margin-bottom: 13px; }
 		.noticias article p { margin: 5px 0; }
-		.noticias article h2 { font-size:22px; line-height: 24px }
+		.noticias article h2 { font-size:22px; line-height: 24px; margin:0; }
 		.noticias article .excrept {}
+		.noticias article img { max-height: 200px; width:100%; margin-bottom:13px; }
 		time { display: inline; color: #aa5555; font-weigth: bold; margin-right:5px; } 
 		
-		.striped { background: transparent url('assets/img/stripe.png') repeat-x bottom left; }
+		.striped { background: transparent url('/assets/img/stripe.png') repeat-x bottom left; }
 		
 		/* hace la caja de FB responsive */ 
-		.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+		.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {width: 100% !important;}
+
+		.social-box { width:100%; background-color: #F4F5F7; }
+		.subscribe-box { border-bottom: 4px solid white; padding:10px; }
+		.twitter-box { background: transparent url('/assets/img/tw.png') 8% center no-repeat; padding:10px; padding-left: 26%; }
+		.facebook-box { background: transparent url('/assets/img/fb.png') 8% center no-repeat; border-bottom: 4px solid white; padding-left: 16%;}
 	</style>
 </head>
 <body>
@@ -56,11 +63,10 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+
 	<script>
 	$(document).ready(function(){
-			$('.bxslider').bxSlider({mode: 'fade'});
-
-			
+			$('.bxslider').bxSlider({mode: 'fade'});	
 			$('.caption').css('top','600px');
 
 			$('.caption').parent().hover(function(){
@@ -81,7 +87,7 @@
 				<a href=""><strong>Ver notas de última hora</strong></a></p>
 			</div>
 			<div class="span6">
-				<a href="/" title="FM Futura 90.5"><img src="assets/img/logo-fm-futura.png" alt="FM Futura 90.5" /></a>
+				<a href="/" title="FM Futura 90.5"><img src="/assets/img/logo-fm-futura.png" alt="FM Futura 90.5" /></a>
 			</div>
 			<div class="span3">
 			</div>
@@ -182,6 +188,7 @@
 							</span>
 						</article>
 						<article>
+							<img src="aleale.jpg" />
 							<h2>Policia se defiende de zombie periodista</h2>
 							<span class="excrept">
 								<p><time>10:20</time>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
@@ -189,13 +196,7 @@
 							</span>
 						</article>
 						<article>
-							<h2>Policia se defiende de zombie periodista</h2>
-							<span class="excrept">
-								<p><time>10:20</time>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
-								<p>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
-							</span>
-						</article>
-						<article>
+							<img src="yeswescan.jpg" />
 							<h2>Policia se defiende de zombie periodista</h2>
 							<span class="excrept">
 								<p><time>10:20</time>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
@@ -203,6 +204,8 @@
 							</span>
 						</article>
 					</div><!-- span6 -->
+					
+
 					<div class="span6 noticias">
 						<article class="destacado">
 							<img src="brasil-periodista-policia.jpg" />
@@ -211,6 +214,13 @@
 								<p><time>10:20</time>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
 								<p>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
 								<p>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa. asjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj aklds.</p>
+							</span>
+						</article>
+						<article>
+							<h2>Policia se defiende de zombie periodista</h2>
+							<span class="excrept">
+								<p><time>10:20</time>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
+								<p>LAalds ca sdlakld klasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj akldsasjd ajds asdj kasdklajs asdklad sakldj aklds klajdk asdklajklsjd asdhggg sa.</p>
 							</span>
 						</article>
 						<article>
@@ -249,27 +259,36 @@
 				<br /><br />
 				
 				<h2 class="striped">Escuchala en vivo</h2>
+				<div class="row-fluid"><div class="span12">
 				<iframe src="http://fmfutura.com.ar/vivo/vivo2.html" name="reproductor" class="pull-right" marginwidth="0" frameborder="0" height="100" scrolling="No" width="210"></iframe>
-				
+				</div></div>
+
 				<h2 class="striped">@Futura905</h2>
 				<a class="twitter-timeline"  href="https://twitter.com/PartidoPirataAr"  data-widget-id="357245628197265410" height="500">Tweets por @PartidoPirataAr</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 				<h2 class="striped">Enterate</h2>
 				<p>Recibi todas las noticias donde te sea más cómodo.</p>
-				
+				<div class="social-box">
+
+				<div class="subscribe-box">
 				<form action="" method="post">
 					<div class="input-append">
 					<input class="input-large" type="email" name="email" placeholder="Ingresa tu dirección de email" />
 					<button class="submit btn"><i class="icon-envelope-alt"></i> Subscribite</button>
 					</div>
 				</form>
+				</div>
 				
-				<br /><br />
-				
-				<div class="fb-like-box" data-href="https://www.facebook.com/RadioFutura905" data-width="300" data-height="200" data-show-faces="true" data-stream="false" data-show-border="true" data-header="true"></div>
-				
-				
+				<div class="facebook-box">
+				<div class="fb-like-box" data-href="https://www.facebook.com/RadioFutura905" data-width="320" data-height="250" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+				</div>
+
+				<div class="twitter-box">
+				<a href="https://twitter.com/HacklabBarracas" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large">Seguir a @HacklabBarracas</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</div>
+
 			</div>
 		</div>
 		
